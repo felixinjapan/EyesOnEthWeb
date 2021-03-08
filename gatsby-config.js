@@ -6,7 +6,22 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Eyes On Eth`,
+    // Default title of the page
+    siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://minimal-blog.lekoarts.de`,
+    // Used for SEO
+    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -15,23 +30,23 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
             title: `About`,
             slug: `/about`,
+          },
+          {
+            title: `Privacy Policy`,
+            slug: `/privacy-policy`,
+          },
+          {
+            title: `News`,
+            slug: `/blog`,
           },
         ],
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
-          },
+            url: `https://twitter.com/eyesoneth`,
+          }
         ],
       },
     },
